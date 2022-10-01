@@ -1,7 +1,6 @@
 import {initializeApp} from 'firebase/app';
 import {
        getAuth,
-       signInWithRedirect,
        signInWithPopup,
        GoogleAuthProvider,
        createUserWithEmailAndPassword,
@@ -32,7 +31,7 @@ const firebaseConfig = {
   };
   
   // Initialize Firebase
-const firebaseApp = initializeApp(firebaseConfig);
+export const firebaseApp = initializeApp(firebaseConfig);
 
 const Provider = new GoogleAuthProvider();
 
