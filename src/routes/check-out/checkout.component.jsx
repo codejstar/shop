@@ -31,13 +31,10 @@ const Checkout = () => {
             {/* <h1>I am the checkout page.</h1> */}
             {/* <div> */}
                 {
-                    cardItems.map((cardItem) => { 
-                        {/* const {id , name , quantity} = cardItem; */}
-                        return (  
-                        <CheckoutItem key={cardItem.id} cardItem={cardItem}/>
-                        );
-                        })
-                }
+                    cardItems.map((cardItem) =>(
+                          <CheckoutItem key={cardItem.id} cardItem={cardItem}/>
+                        ))
+                        }
                 <span className='total'>Total: ${cardTotal}</span>
             {/* </div> */}
         </div>

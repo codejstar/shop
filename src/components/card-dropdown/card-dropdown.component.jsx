@@ -1,4 +1,9 @@
-import './card-dropdown.styles.scss';
+import {  
+  CartDropdownContainer,
+  EmptyMessage,
+  CartItems,
+} from './card-dropdown.styles';
+
 import { useContext } from 'react';
 import { useNavigate } from 'react-router-dom'; //hook
 
@@ -16,19 +21,19 @@ const CardDropdown = () => {
   }
 
   return (
-    <div className='card-dropdown-container'>
-      <div className='card-items'>
-        {/* {cartItems.length ? (
-          cartItems.map((cartItem) => (
-            <CartItem key={cartItem.id} cartItem={cartItem} />
+    <CartDropdownContainer>
+      <CartItems>
+        {cardItems.length ? (
+          cardItems.map((cartItem) => (
+            <CardItem key={cartItem.id} cardItem={cartItem} />
           ))
         ) : (
-          <span className='empty-message'>Your cart is empty</span>
-        )} */}
-        {cardItems.map(item => <CardItem key={item.id} cardItem={item}/>)}
-      </div>
+          <EmptyMessage as='span'>Your cart is empty</EmptyMessage>
+        )}
+        {/* {cardItems.map(item => <CardItem key={item.id} cardItem={item}/>)} */}
+      </CartItems>
       <Button onClick={goToCheckOutHandler}>Check Out</Button>
-    </div>
+    </CartDropdownContainer>
   );
 };
 

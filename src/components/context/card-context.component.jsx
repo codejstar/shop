@@ -72,16 +72,28 @@ export const CardProvider = ({ children }) => {
     setCardTotal(newCardTotal);
   }, [cardItems]);
 
-  const addItemToCard = (product) =>
+  const addItemToCard = (product) => {
     setCardItems(addCardItem(cardItems, product));
-
-    const removeItemToCard = (cardItemToRemove) =>
+  };
+  
+    const removeItemToCard = (cardItemToRemove) =>{
     setCardItems(removeCardItem(cardItems, cardItemToRemove));
+    };
 
-    const clearItemFromCard = (cardItemToClear) =>
+    const clearItemFromCard = (cardItemToClear) => {
     setCardItems(clearCardItem(cardItems, cardItemToClear));
+    };
 
-  const value = { isCardOpen, setIsCardOpen, cardItems, addItemToCard,cardItemCount,removeItemToCard,clearItemFromCard,cardTotal};
+  const value = { 
+    isCardOpen, 
+    setIsCardOpen, 
+    cardItems, 
+    addItemToCard,
+    cardItemCount,
+    removeItemToCard,
+    clearItemFromCard,
+    cardTotal
+  };
 
   return <CardContext.Provider value={value}>{children}</CardContext.Provider>;
 };
