@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { Link } from 'react-router-dom';
 import ProductCard from '../product-card/product-card.component'
 import './category-preview.styles.scss'

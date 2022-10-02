@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from 'react'
 import './product-card.styles.scss';
 import { useContext } from 'react';
