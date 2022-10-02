@@ -1,3 +1,4 @@
+import React from 'react'
 import './product-card.styles.scss';
 import { useContext } from 'react';
 import Button,{ BUTTON_TYPE_CLASSES } from '../button/button.component';

@@ -1,3 +1,4 @@
+import React from 'react'
 import { useContext} from 'react';
 
 import { CategoriesContext } from '../../components/contexts/categories.context';

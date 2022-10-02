@@ -1,3 +1,4 @@
+/* eslint-disable */
 import {initializeApp} from 'firebase/app';
 import {
        getAuth,
@@ -31,7 +32,7 @@ const firebaseConfig = {
   };
   
   // Initialize Firebase
-export const firebaseApp = initializeApp(firebaseConfig);
+const firebaseApp = initializeApp(firebaseConfig);
 
 const Provider = new GoogleAuthProvider();
 

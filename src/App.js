@@ -1,5 +1,5 @@
-// import CategoryItems from './components/category-item/category-item.component.jsx';
-// import Directory  from './components/directory/directory.component.jsx';
+/* eslint-disable */
+import React from 'react';
 import {Routes,Route} from 'react-router-dom';
 import Home from './routes/home/home.component.jsx'; 
 import Nav from './routes/Nav/Navigation.component';
@@ -7,7 +7,27 @@ import Authentication from './routes/authentication/authentication.jsx'
 import Shop from './routes/shop/shop.component.jsx';
 import Checkout from './routes/check-out/checkout.component.jsx';
 import './index.scss';
+
 const App = () => {
+return (
+    <> 
+      <Routes>
+      <Route path='/' element={<Nav/>}>
+      <Route index element={<Home />}/> 
+      <Route path='shop/*' element={<Shop/>} /> 
+      <Route path='auth' element={<Authentication/>} /> 
+      <Route path='checkout' element={<Checkout/>}/>
+       </Route>
+      </Routes>
+
+    </> 
+  );
+}
+
+export default App;
+
+// import CategoryItems from './components/category-item/category-item.component.jsx';
+// import Directory  from './components/directory/directory.component.jsx';
 
 //   const categories =  [
 //       {
@@ -36,8 +56,14 @@ const App = () => {
 //         "imageUrl": "https://i.ibb.co/R70vBrQ/men.png",
 //       }
 //     ];
+    /* <div className="categories-container">
+     {categories.map((category)=>(
+        <CategoryItems key={category.id} category={category}/>
+     ))} 
+    </div> */
 
-  // const Navigation = () =>{
+    /* <Directory categories={categories}/> */
+    // const Navigation = () =>{
   //    return (
   //     <div>
   //       <div>
@@ -55,28 +81,3 @@ const App = () => {
   //     </div>
   //   );
   // };
-
-  return (
-    <> 
-     {/* <div className="categories-container">
-     {categories.map((category)=>(
-        <CategoryItems key={category.id} category={category}/>
-     ))} 
-    </div> */}
-
-    {/* <Directory categories={categories}/> */}
-    
-      <Routes>
-      <Route path='/' element={<Nav/>}>
-      <Route index element={<Home />}/> 
-      <Route path='shop/*' element={<Shop/>} /> 
-      <Route path='auth' element={<Authentication/>} /> 
-      <Route path='checkout' element={<Checkout/>}/>
-       </Route>
-      </Routes>
-
-    </> 
-  );
-}
-
-export default App;

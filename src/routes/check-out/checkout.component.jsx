@@ -1,3 +1,4 @@
+import React from 'react'
 import './checkout.styles.scss';
 import { useContext } from 'react';
 import { CardContext } from '../../components/context/card-context.component';

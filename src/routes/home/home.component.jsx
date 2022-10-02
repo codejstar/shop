@@ -1,3 +1,4 @@
+import React from 'react'
 // import CategoryItems from './components/category-item/category-item.component.jsx';
 import Directory  from '../../components/directory/directory.component.jsx';
 import { Outlet } from 'react-router-dom';
