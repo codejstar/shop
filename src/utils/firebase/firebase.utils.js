@@ -32,7 +32,7 @@ const firebaseConfig = {
   };
   
   // Initialize Firebase
-const firebaseApp = initializeApp(firebaseConfig);
+export const firebaseApp = initializeApp(firebaseConfig);
 
 const Provider = new GoogleAuthProvider();
 

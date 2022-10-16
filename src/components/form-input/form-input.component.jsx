@@ -1,11 +1,12 @@
+/* eslint-disable */
 import React from 'react'
 import {FormInputLabel, Input, Group } from './form-input.styles.jsx';
-const FormInput = ({...otherProps}) => {
+const FormInput = ({ label ,...otherProps}) => {
     return (
         <Group>
          <Input {...otherProps}/>
-        {this.props.label && (
-         <FormInputLabel shrink={otherProps.value.length}>{this.props.label}</FormInputLabel>
+        {label && (
+         <FormInputLabel shrink={otherProps.value.length}>{label}</FormInputLabel>
         )}
          </Group>
     );
